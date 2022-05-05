@@ -91,13 +91,23 @@ namespace Laptop
         static void Main(string[] args)
         { 
             Laptop obj = new Laptop("Aspire 5", "Acer", 32600);
-            Laptop obj1 = new Laptop("55", "Dell", 32600);          
+            Laptop obj1 = new Laptop("Inspiron 17", "Dell", 32600);
+            Laptop obj2 = new Laptop("Pavilion", "HP", 25999);
+            obj.Name = "Aspire 5";
+            obj.Produser = "Acer";
+            obj.Price = 32600;
+            obj1.Name = "Inspiron 17";
+            obj1.Produser = "Dell";
+            obj1.Price = 31700;
+            obj2.Name = "Pavilion";
+            obj2.Produser = "HP";
+            obj2.Price = 25999;
 
-            Shop s = new Shop(obj, obj1);
+            Shop s = new Shop(obj, obj1, obj2);
             Console.WriteLine(s.name_shop + "\n");
             
             for (int i = 0; i < s.ArrSize; i++) 
-            Console.Write(s[i] + "\n");  
+            Console.Write("Name: " + s[i].Name + "  Produser: " + s[i].Produser + "  Price: " + s[i].Price + "\n");  
             Console.WriteLine();   
         }
     }
